@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligar/Desligar LEDS</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID </th>
+                <th>Nome</th>
+                <th>Ip</th>
+                <th>Led</th>
+                <th>Distancia</th>
+                <th>Potenciometro</th>
+                <th>Pir</th>
+                <th>Relé</th>
+                <th>Teclado</th>
+                <th>Touch</th>
+                <th>Temperatura</th>
+                <th>Umidade</th>
+                <th>LCD</th>
+                <th>Servo</th>
+                <th></th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            {% for dispositivo in iot %}
+            <tr>
+                <td>{{dispositivo[0]}}</td>
+                <td>{{dispositivo[1]}}</td> 
+                <td>{{dispositivo[2]}}</td>
+                <td>{{dispositivo[3]}}</td>
+                <td>{{dispositivo[4]}}</td>
+                <td>{{dispositivo[5]}}</td>
+                <td>{{dispositivo[6]}}</td>
+                <td>{{dispositivo[7]}}</td>
+                <td>{{dispositivo[8]}}</td> 
+                <td>{{dispositivo[9]}}</td>
+                <td>{{dispositivo[10]}}</td>
+                <td>{{dispositivo[11]}}</td>
+                <td>{{dispositivo[12]}}</td>
+                <td>{{dispositivo[13]}}</td>
+                <td><a href="/alterar_dispositivo/{{dispositivo[0]}}">Alterar Dispositivo</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
+    
+</body>
+</html>

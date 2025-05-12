@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+    <form action="/alterar_dispositivo/{{id}}" method="post">
+
+    <div class="caixa">
+        
+        
+        <label for="nome">Digite o nome</label>
+        <input type="text" name="nome" value="{{dispositivo[1]}}">
+
+        <label for="ip">Digite o IP</label>
+        <input type="text" name="ip" value="{{dispositivo[2]}}">
+
+        <label for="led"> Escolha o estado do led</label>
+        <input type="checkbox" name="led" id="" {% if dispositivo[3] %} checked {% endif %}>
+
+        <label for="rele"> Escolha o estado do relé</label>
+        <input type="checkbox" name="rele" id="" {% if dispositivo[7] %} checked {% endif %}>
+
+        <label for="lcd">Digite a mensagem do LCD</label>
+        <input type="text" name="lcd" value="{{dispositivo[12]}}">
+
+        <label for="servo">Digite o angulo do servo-motor</label>
+        <input type="number" name="servo" min="0" max="180" value="{{dispositivo[13]}}">
+
+
+
+
+
+        <button type="submit">Enviar</button>
+    </div>
+</form>
+
+</body>
+</html>
