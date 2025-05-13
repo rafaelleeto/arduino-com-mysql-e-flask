@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicione o dispositivo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <form action="/adicionar_dispositivo" method="post">
+        <div class="caixa">
+            <label for="nome">Digite o Nome </label>
+            <input type="text" name="nome" required>
+
+            <label for="ip">Digite o IP </label>
+            <input type="text" name="ip" required>
+            <button type="submit">Adicionar</button>
+        </div>
+    </form> 
+
+</body>
+</html>

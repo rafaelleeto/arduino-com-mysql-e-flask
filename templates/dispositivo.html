@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ligar/Desligar LEDS</title>
+    <title>MENU de dispositivos</title>
     <link rel="stylesheet" href="/static/styles.css">
+
 </head>
 <body>
 <body>
@@ -36,13 +37,13 @@
                 <td>{{dispositivo[0]}}</td>
                 <td>{{dispositivo[1]}}</td> 
                 <td>{{dispositivo[2]}}</td>
-                <td>{{dispositivo[3]}}</td>
+                <td>{% if dispositivo[3]== 1 %}🟩{% endif %} {% if dispositivo[3]== 0 %}🟥{% endif %} </td>
                 <td>{{dispositivo[4]}}</td>
                 <td>{{dispositivo[5]}}</td>
-                <td>{{dispositivo[6]}}</td>
-                <td>{{dispositivo[7]}}</td>
+                <td>{% if dispositivo[6]== 1 %}🟩{% endif %} {% if dispositivo[6]== 0 %}🟥{% endif %} </td>
+                <td>{% if dispositivo[7]== 1 %}🟩{% endif %} {% if dispositivo[7]== 0 %}🟥{% endif %} </td>
                 <td>{{dispositivo[8]}}</td> 
-                <td>{{dispositivo[9]}}</td>
+                <td>{% if dispositivo[9]== 1 %}🟩{% endif %} {% if dispositivo[9]== 0 %}🟥{% endif %} </td>
                 <td>{{dispositivo[10]}}</td>
                 <td>{{dispositivo[11]}}</td>
                 <td>{{dispositivo[12]}}</td>
@@ -52,6 +53,7 @@
             {% endfor %}
         </tbody>
     </table>
+    <a href="/adicionar_dispositivo">Adicione um dispositivo </a>
 
 </body>
 </html>

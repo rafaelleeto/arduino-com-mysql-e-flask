@@ -1,8 +1,13 @@
+*{
+    font-family: Arial, sans-serif; /* Definindo a fonte */
+
+}
 table {
     width: 100%;
     border-collapse: collapse; /* Remove o espaço entre as células */
     margin: 20px 0;
     font-family: Arial, sans-serif; /* Definindo a fonte */
+    text-align: center;
 }
 
 /* Estilo para os cabeçalhos da tabela */
@@ -12,6 +17,7 @@ th {
     text-align: left; /* Alinha o texto à esquerda */
     padding: 12px 15px; /* Espaçamento interno nos cabeçalhos */
     font-size: 16px;
+    text-align: center;
 }
 
 /* Estilo para as células da tabela */
@@ -20,6 +26,7 @@ td {
     padding: 12px 15px; /* Espaçamento interno nas células */
     text-align: left; /* Alinha o texto à esquerda */
     font-size: 14px;
+    text-align: center;
 }
 
 /* Efeito de hover nas linhas da tabela */
@@ -62,7 +69,7 @@ ul li {
 }
 
 /* Estilo dos links */
-ul a {
+a {
     text-decoration: none; /* Remove o sublinhado */
     color: #fff; /* Cor do texto */
     font-size: 18px;
@@ -70,22 +77,23 @@ ul a {
     display: block;
     border-radius: 5px; /* Bordas arredondadas nos links */
     transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição */
+    
 }
 
 /* Efeito de hover (passar o mouse) */
-ul a:hover {
+a:hover {
     background-color: #007bff; /* Cor de fundo ao passar o mouse */
     color: #fff; /* Cor do texto ao passar o mouse */
 }
 
 /* Efeito de foco (quando o link está em foco) */
-ul a:focus {
+a:focus {
     outline: none; /* Remove o contorno padrão */
     box-shadow: 0 0 5px #007bff; /* Adiciona um brilho ao redor do link */
 }
 
 /* Estilo para os links dentro da tabela (como botões) */
-table a {
+a {
     display: inline-block; /* Para que o link tenha o comportamento de um botão */
     padding: 10px 20px; /* Espaçamento interno */
     margin: 5px 0; /* Margem para dar espaçamento entre os links */
@@ -99,19 +107,19 @@ table a {
 }
 
 /* Efeito de hover (passar o mouse) */
-table a:hover {
+a:hover {
     background-color: #0056b3; /* Cor de fundo azul mais escuro */
     transform: translateY(-2px); /* Levanta o botão um pouco */
 }
 
 /* Efeito de focus (quando o link está em foco) */
-table a:focus {
+a:focus {
     outline: none; /* Remove o contorno padrão */
     box-shadow: 0 0 5px #007bff; /* Brilho ao redor do link */
 }
 
 /* Efeito de clique */
-table a:active {
+a:active {
     transform: translateY(1px); /* Quando clicar, o botão vai para baixo */
 }
 
@@ -196,3 +204,4 @@ button:active {
     flex-direction: column;
     align-items: center;
 }
+

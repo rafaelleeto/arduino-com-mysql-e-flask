@@ -27,4 +27,11 @@ def pegar_dispositivo(id):
     cursor.execute("""SELECT * FROM iot WHERE id=%s """,(id,))
     return cursor.fetchone()
 
+def adicionar_dispositivo(nome,ip):
+    conexao = conectar_banco()
+    cursor = conexao.cursor(buffered=True)
+    cursor.execute("""INSERT INTO iot (nome,ip) VALUES (%s,%s)""",(nome,ip))
+    conexao.commit()
+    cursor.close()
+
 
